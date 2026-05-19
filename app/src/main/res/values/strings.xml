@@ -1,3 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PrintXpress</string>
+    <string name="welcome_message">Welcome to PrintXpress</string>
+    <string name="tagline">Your digital printing partner</string>
+
+    <!-- Auth & Profile -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="create_account">Create Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="no_account_register">Don\'t have an account? Register</string>
+    <string name="have_account_login">Already have an account? Login</string>
+    <string name="logout">Logout</string>
+    <string name="save_changes">Save Changes</string>
+
+    <!-- Navigation -->
+    <string name="home">Home</string>
+    <string name="orders">Orders</string>
+    <string name="my_orders">My Orders</string>
+    <string name="profile">Profile</string>
+    <string name="products">Products</string>
+    <string name="promotions">Promotions</string>
+    <string name="design_resources">Design Resources</string>
+    <string name="faqs">FAQs</string>
+
+    <!-- Ordering UI -->
+    <string name="paper_type">Paper Type</string>
+    <string name="size">Size</string>
+    <string name="customization">Customization</string>
+    <string name="custom_text_hint">Enter custom text (optional)</string>
+    <string name="upload_design">Upload Design/Photo</string>
+    <string name="quantity">Quantity</string>
+    <string name="delivery_method">Delivery Method</string>
+    <string name="pickup">Pickup</string>
+    <string name="delivery">Home Delivery</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="place_order">Place Order</string>
+
+    <!-- Guidelines -->
+    <string name="design_guidelines">Design Guidelines</string>
+    <string name="design_perfection">Design for Perfection</string>
+    <string name="guidelines_tips">View our printing guidelines and tips.</string>
+    <string name="new_to_design">New to Design?</string>
+
+    <!-- Messages -->
+    <string name="order_placed_success">Order placed successfully!</string>
+    <string name="upload_success">Artwork uploaded successfully!</string>
+    <string name="fill_all_fields">Please fill all fields</string>
+    <string name="profile_updated">Profile updated!</string>
+    <string name="update_failed">Update failed: %1$s</string>
+    <string name="price_format">Rs. %.2f</string>
+    <string name="qty_format">Qty: %1$d</string>
+
+    <!-- Legacy/Alias support for layouts -->
+    <string name="label_full_name">Full Name</string>
+    <string name="label_email">Email</string>
+    <string name="label_phone">Phone Number</string>
+    <string name="label_password">Password</string>
+    <string name="title_register">Register</string>
+    <string name="msg_have_account">Already have an account? Login</string>
+
+    <string name="printing_categories">Printing Categories</string>
+
+    <!-- New Strings -->
+    <string name="saved_designs">Saved Designs</string>
+    <string name="delivery_addresses">Delivery Addresses</string>
+    <string name="no_saved_designs">No saved designs yet. Upload your first design to see it here!</string>
+    <string name="no_addresses_saved">No addresses saved. Add your primary delivery address.</string>
+    <string name="reschedule_order">Reschedule Order</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="reschedule_success">Reschedule requested for %1$s</string>
+    <string name="order_completed_title">Order Completed!</string>
+    <string name="order_completed_msg">Great news! Your order #%1$s is ready and completed.</string>
+    <string name="seasonal_promo_title">Festive Season Offer!</string>
+    <string name="seasonal_promo_msg">Get up to 20%% off on bulk orders this week! Use code FESTIVE20.</string>
+    <string name="add_new_address">Add New Address</string>
+    <string name="address_label_hint">Label (e.g. Home, Office)</string>
+    <string name="full_address_hint">Full Delivery Address</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+
 </resources>

@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="PrintXpress"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PrintXpress">
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activities.AuthActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activities.DesignUploadActivity"
+            android:exported="false"
+            android:label="Upload Design" />
+
+        <activity
+            android:name=".activities.DesignGuidelinesActivity"
+            android:exported="false"
+            android:label="Design Guidelines" />
+
+        <activity
+            android:name=".activities.CategoryDetailActivity"
+            android:exported="false"
+            android:label="Product Details" />
+
+        <activity
+            android:name=".activities.SupportActivity"
+            android:exported="false"
+            android:label="Help &amp; Support" />
+
+        <activity
+            android:name=".activities.SavedDesignsActivity"
+            android:exported="false"
+            android:label="Saved Designs" />
+
+        <activity
+            android:name=".activities.DeliveryAddressesActivity"
+            android:exported="false"
+            android:label="Delivery Addresses" />
+
     </application>
 
 </manifest>
