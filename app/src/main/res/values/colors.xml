@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#1A237E</color>
+    <color name="colorPrimaryDark">#000051</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="status_processing">#FF9800</color>
+    <color name="status_printing">#2196F3</color>
+    <color name="status_ready">#4CAF50</color>
+    <color name="status_completed">#757575</color>
+    <color name="background_light">#F5F5F5</color>
 </resources>

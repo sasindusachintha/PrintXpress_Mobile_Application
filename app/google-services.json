@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "614177670622",
+    "project_id": "print1-3c07a",
+    "storage_bucket": "print1-3c07a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614177670622:android:e9c5943647351feffa494f",
+        "android_client_info": {
+          "package_name": "com.example.print"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGzwbJY5YQwIFMKbordnwnEYDcdoyuHBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
