@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="paper_types">
+        <item>Standard Paper (80gsm)</item>
+        <item>Glossy Paper (120gsm)</item>
+        <item>Matte Card (250gsm)</item>
+        <item>Textured Paper</item>
+        <item>Sticker Sheet</item>
+        <item>Synthetic Fabric</item>
+    </string-array>
+
+    <string-array name="print_sizes">
+        <item>Standard (A4)</item>
+        <item>Small (A5)</item>
+        <item>Business Card (3.5\" x 2\")</item>
+        <item>Large (A3)</item>
+        <item>Banner (6ft x 3ft)</item>
+        <item>Custom Size</item>
+    </string-array>
+</resources>
