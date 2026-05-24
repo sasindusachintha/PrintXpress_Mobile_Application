@@ -22,7 +22,7 @@
             <ImageView
                 android:layout_width="415dp"
                 android:layout_height="132dp"
-                android:contentDescription="Banner Image"
+                android:contentDescription="@string/banner_image_desc"
                 android:scaleType="centerInside"
                 android:src="@drawable/logo"
                 app:layout_constraintBottom_toBottomOf="parent"

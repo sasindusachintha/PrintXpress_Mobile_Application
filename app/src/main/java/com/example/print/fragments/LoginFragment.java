@@ -27,7 +27,12 @@ public class LoginFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_login, container, false);
+        return inflater.inflate(R.layout.fragment_login, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         etEmail = view.findViewById(R.id.et_login_email);
         etPassword = view.findViewById(R.id.et_login_password);
@@ -37,16 +42,18 @@ public class LoginFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(AuthViewModel.class);
 
         btnLogin.setOnClickListener(v -> {
+            if (etEmail.getText() == null || etPassword.getText() == null) return;
+            
             String email = etEmail.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
 
             if (ValidationUtils.isEmpty(email) || ValidationUtils.isEmpty(password)) {
-                Toast.makeText(getContext(), "Please fill all fields", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), R.string.fill_all_fields, Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (!ValidationUtils.isValidEmail(email)) {
-                etEmail.setError("Invalid email address");
+                etEmail.setError(getString(R.string.error_invalid_email));
                 return;
             }
 
@@ -54,20 +61,22 @@ public class LoginFragment extends Fragment {
         });
 
         tvGoToRegister.setOnClickListener(v -> {
-            ((AuthActivity) requireActivity()).switchFragment(new RegisterFragment());
+            if (getActivity() instanceof AuthActivity) {
+                ((AuthActivity) getActivity()).switchFragment(new RegisterFragment());
+            }
         });
 
-        viewModel.getAuthSuccess().observe(getViewLifecycleOwner(), success -> {
-            if (success) {
-                startActivity(new Intent(getActivity(), MainActivity.class));
+        viewModel.getAuthSuccess().observe(getViewLifecycleOwner(), (Boolean success) -> {
+            if (Boolean.TRUE.equals(success)) {
+                startActivity(new Intent(requireActivity(), MainActivity.class));
                 requireActivity().finish();
             }
         });
 
-        viewModel.getAuthError().observe(getViewLifecycleOwner(), error -> {
-            Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
+        viewModel.getAuthError().observe(getViewLifecycleOwner(), (String error) -> {
+            if (error != null) {
+                Toast.makeText(requireContext(), error, Toast.LENGTH_LONG).show();
+            }
         });
-
-        return view;
     }
 }

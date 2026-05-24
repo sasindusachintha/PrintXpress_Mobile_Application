@@ -35,7 +35,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_login_email"
-                android:layout_width="match_parent"
+                android:layout_width="349dp"
                 android:layout_height="wrap_content"
                 android:background="@color/background_light"
                 android:backgroundTint="@color/background_light"
@@ -53,7 +53,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_login_password"
-                android:layout_width="match_parent"
+                android:layout_width="351dp"
                 android:layout_height="wrap_content"
                 android:background="@color/background_light"
                 android:inputType="textPassword" />
@@ -61,8 +61,8 @@
 
         <Button
             android:id="@+id/btn_login_submit"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/login" />
 
@@ -90,7 +90,7 @@
     <ImageView
         android:layout_width="415dp"
         android:layout_height="132dp"
-        android:contentDescription="Banner Image"
+        android:contentDescription="@string/banner_image_desc"
         android:scaleType="centerInside"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"

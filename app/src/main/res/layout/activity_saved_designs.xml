@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
+        app:title="@string/saved_designs"
         app:titleTextColor="@android:color/white" />
 
     <FrameLayout
@@ -28,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="No saved designs yet.\nUpload your first design to see it here!"
+            android:text="@string/no_saved_designs"
             android:textAlignment="center"
             android:visibility="gone" />
 

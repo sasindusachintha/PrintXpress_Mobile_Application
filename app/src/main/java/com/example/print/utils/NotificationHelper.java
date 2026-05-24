@@ -12,16 +12,14 @@ import com.example.print.R;
 
 public class NotificationHelper {
     private static final String CHANNEL_ID = "print_orders_channel";
-    private static final String CHANNEL_NAME = "Order Updates";
     private static final String PROMO_CHANNEL_ID = "print_promo_channel";
-    private static final String PROMO_CHANNEL_NAME = "Promotions & Offers";
 
     public static void showNotification(Context context, String title, String message) {
-        showNotification(context, title, message, CHANNEL_ID, CHANNEL_NAME);
+        showNotification(context, title, message, CHANNEL_ID, context.getString(R.string.orders));
     }
 
     public static void showPromoNotification(Context context, String title, String message) {
-        showNotification(context, title, message, PROMO_CHANNEL_ID, PROMO_CHANNEL_NAME);
+        showNotification(context, title, message, PROMO_CHANNEL_ID, context.getString(R.string.promotions));
     }
 
     private static void showNotification(Context context, String title, String message, String channelId, String channelName) {

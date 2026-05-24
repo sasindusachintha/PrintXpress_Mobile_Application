@@ -107,7 +107,7 @@
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reschedule"
+                android:text="@string/reschedule_order"
                 android:textSize="12sp" />
 
             <com.google.android.material.button.MaterialButton
@@ -115,7 +115,7 @@
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cancel"
+                android:text="@string/cancel"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="12sp" />
 

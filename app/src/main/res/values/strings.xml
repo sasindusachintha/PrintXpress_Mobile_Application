@@ -17,6 +17,13 @@
     <string name="have_account_login">Already have an account? Login</string>
     <string name="logout">Logout</string>
     <string name="save_changes">Save Changes</string>
+    <string name="user_not_authenticated">User not authenticated</string>
+    <string name="error_invalid_phone">Invalid phone number (10 digits)</string>
+    <string name="error_invalid_email">Invalid email address</string>
+    <string name="error_invalid_password">Password must be at least 6 characters</string>
+    <string name="welcome_user_format">Welcome to PrintXpress, %1$s!</string>
+    <string name="quick_links">Quick Links</string>
+    <string name="placeholder_email">user@example.com</string>
 
     <!-- Navigation -->
     <string name="home">Home</string>
@@ -40,12 +47,30 @@
     <string name="delivery">Home Delivery</string>
     <string name="delivery_address">Delivery Address</string>
     <string name="place_order">Place Order</string>
+    <string name="select_design">Select Design</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="design_name_hint">Design Name</string>
+    <string name="description_hint">Description</string>
+    <string name="additional_notes_hint">Additional Notes</string>
+    <string name="save_design_future">Save this design for future use</string>
+    <string name="upload_title_format">Upload: %1$s</string>
+    <string name="error_select_design">Please select a design image</string>
+    <string name="error_name_required">Design name is required</string>
+    <string name="error_invalid_quantity">Enter a valid quantity</string>
 
     <!-- Guidelines -->
     <string name="design_guidelines">Design Guidelines</string>
     <string name="design_perfection">Design for Perfection</string>
     <string name="guidelines_tips">View our printing guidelines and tips.</string>
     <string name="new_to_design">New to Design?</string>
+    <string name="guideline_res_title">1. Image Resolution</string>
+    <string name="guideline_res_desc">All designs should be at least 300 DPI (dots per inch) to ensure a crisp, high-quality print. Low-resolution images may appear blurry.</string>
+    <string name="guideline_formats_title">2. File Formats</string>
+    <string name="guideline_formats_desc">We accept high-quality JPEG, PNG, PDF, and TIFF files. PNG is recommended for designs requiring transparency.</string>
+    <string name="guideline_bleed_title">3. Bleed Margins</string>
+    <string name="guideline_bleed_desc">Please keep a 3mm safety margin (bleed) on all sides. Keep important text and logos at least 5mm away from the edge.</string>
+    <string name="guideline_color_title">4. Color Formats</string>
+    <string name="guideline_color_desc">Designs should ideally be in CMYK color mode. While we accept RGB, colors may shift slightly during the printing process.</string>
 
     <!-- Messages -->
     <string name="order_placed_success">Order placed successfully!</string>
@@ -54,7 +79,17 @@
     <string name="profile_updated">Profile updated!</string>
     <string name="update_failed">Update failed: %1$s</string>
     <string name="price_format">Rs. %.2f</string>
-    <string name="qty_format">Qty: %1$d</string>
+    <string name="qty_format">Qty: %1$s</string>
+    <string name="no_orders_found">No orders found</string>
+    <string name="failed_load_image">Failed to load image</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string name="order_success_msg_format">Your order for %1$s has been placed successfully!</string>
+    <string name="failed_place_order_format">Failed to place order: %1$s</string>
+    <string name="success">Success</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="error_order_id_generation">Could not generate order ID</string>
 
     <!-- Legacy/Alias support for layouts -->
     <string name="label_full_name">Full Name</string>
@@ -66,6 +101,28 @@
 
     <string name="printing_categories">Printing Categories</string>
 
+    <!-- Categories -->
+    <string name="cat_business_cards">Business Cards</string>
+    <string name="cat_posters">Posters</string>
+    <string name="cat_banners">Banners</string>
+    <string name="cat_flyers">Flyers</string>
+    <string name="cat_stickers">Stickers</string>
+    <string name="cat_merchandise">Merchandise</string>
+
+    <string name="price_starting_format">Starting at %1$s</string>
+    <string name="spec_bc">Premium 350gsm paper, Standard size 3.5x2\"</string>
+    <string name="spec_posters">A3, A2, A1 sizes, Gloss or Matte finish</string>
+    <string name="spec_banners">Durable vinyl, include eyelets</string>
+    <string name="spec_flyers">Double-sided, 150gsm silk paper</string>
+    <string name="spec_stickers">Custom shapes, waterproof vinyl</string>
+    <string name="spec_merch">T-shirts, Mugs, Tote bags</string>
+
+    <!-- Promotions -->
+    <string name="promo_bc_off">50%% Off Business Cards</string>
+    <string name="promo_bulk_posters">Bulk Poster Printing</string>
+    <string name="promo_free_delivery_banners">Free Delivery on Banners</string>
+    <string name="special_offer">Special Offer</string>
+
     <!-- New Strings -->
     <string name="saved_designs">Saved Designs</string>
     <string name="delivery_addresses">Delivery Addresses</string>
@@ -73,7 +130,16 @@
     <string name="no_addresses_saved">No addresses saved. Add your primary delivery address.</string>
     <string name="reschedule_order">Reschedule Order</string>
     <string name="cancel_order">Cancel Order</string>
+    <string name="reschedule">Reschedule</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_order_confirm">Are you sure you want to cancel this order?</string>
+    <string name="order_cancelled">Order cancelled</string>
+    <string name="order_cancelled_title">Order Cancelled</string>
+    <string name="order_cancelled_msg_format">Your order #%1$s has been cancelled.</string>
     <string name="reschedule_success">Reschedule requested for %1$s</string>
+    <string name="reschedule_requested_title">Reschedule Requested</string>
+    <string name="reschedule_requested_msg_format">Requested delivery date for order #%1$s moved to %2$s</string>
+    <string name="rescheduled_note_format">\n[Rescheduled to: %1$s]</string>
     <string name="order_completed_title">Order Completed!</string>
     <string name="order_completed_msg">Great news! Your order #%1$s is ready and completed.</string>
     <string name="seasonal_promo_title">Festive Season Offer!</string>
@@ -82,6 +148,71 @@
     <string name="address_label_hint">Label (e.g. Home, Office)</string>
     <string name="full_address_hint">Full Delivery Address</string>
     <string name="add">Add</string>
-    <string name="cancel">Cancel</string>
 
+    <!-- Category Detail -->
+    <string name="category_name_placeholder">Category Name</string>
+    <string name="pricing_start_at">Pricing starts at %1$s</string>
+    <string name="specifications">Specifications</string>
+    <string name="specifications_placeholder">Detailed specifications go here...</string>
+    <string name="sample_previews">Sample Previews</string>
+    <string name="upload_my_design">Upload My Design</string>
+
+    <!-- Support & FAQs -->
+    <string name="faqs_title">Frequently Asked Questions</string>
+    <string name="faq_q1">How long does printing take?</string>
+    <string name="faq_a1">Usually 2-3 business days after design approval.</string>
+    <string name="faq_q2">Can I cancel my order?</string>
+    <string name="faq_a2">Yes, as long as it is in \'Pending\' status.</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="email_support">Email Support</string>
+    <string name="call_customer_service">Call Customer Service</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="email_subject_query">Design Related Query</string>
+    <string name="send_email_chooser">Send Email</string>
+
+    <!-- Content Descriptions -->
+    <string name="add_address_desc">Add Address</string>
+    <string name="design_preview_desc">Design Preview</string>
+    <string name="banner_image_desc">Banner Image</string>
+
+    <!-- Status -->
+    <string name="status_pending">Pending</string>
+    <string name="status_processing">Processing</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_cancelled">Cancelled</string>
+
+    <!-- Address & Design Management -->
+    <string name="error_load_addresses">Failed to load addresses</string>
+    <string name="error_label_required">Label is required</string>
+    <string name="error_address_required">Address is required</string>
+    <string name="msg_address_added">Address added!</string>
+    <string name="error_load_designs">Failed to load designs</string>
+    <string name="msg_selected_format">Selected: %1$s</string>
+    <string name="rescheduled_label_format">\n(Rescheduled: %1$s)</string>
+
+    <!-- Placeholders / Tools -->
+    <string name="placeholder_design_name">My Design</string>
+    <string name="placeholder_date">24 Oct 2023</string>
+    <string name="placeholder_qty">Qty: 100</string>
+    <string name="description">description</string>
+
+
+    <!-- <string name="upload_design">Upload Design</string> -->
+
+    <!-- <string name="products">Product Details</string> -->
+
+
+    <!-- <string name="upload_design">Upload Design</string> -->
+
+    <!-- <string name="products">Product Details</string> -->
+
+
+    <!-- <string name="upload_design">Upload Design</string> -->
+
+    <!-- <string name="products">Product Details</string> -->
+
+
+    <!-- <string name="upload_design">Upload Design</string> -->
+
+    <!-- <string name="products">Product Details</string> -->
 </resources>

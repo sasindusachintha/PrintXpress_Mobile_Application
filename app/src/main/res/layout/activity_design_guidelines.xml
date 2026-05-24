@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:title="Design Guidelines"
+            app:title="@string/design_guidelines"
             app:titleTextColor="@android:color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -45,7 +45,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1. Image Resolution"
+                        android:text="@string/guideline_res_title"
                         android:textColor="@color/colorPrimary"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -54,14 +54,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="All designs should be at least 300 DPI (dots per inch) to ensure a crisp, high-quality print. Low-resolution images may appear blurry."
+                        android:text="@string/guideline_res_desc"
                         android:textColor="#555555" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="2. File Formats"
+                        android:text="@string/guideline_formats_title"
                         android:textColor="@color/colorPrimary"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -70,14 +70,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="We accept high-quality JPEG, PNG, PDF, and TIFF files. PNG is recommended for designs requiring transparency."
+                        android:text="@string/guideline_formats_desc"
                         android:textColor="#555555" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="3. Bleed Margins"
+                        android:text="@string/guideline_bleed_title"
                         android:textColor="@color/colorPrimary"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -86,14 +86,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Please keep a 3mm safety margin (bleed) on all sides. Keep important text and logos at least 5mm away from the edge."
+                        android:text="@string/guideline_bleed_desc"
                         android:textColor="#555555" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="4. Color Formats"
+                        android:text="@string/guideline_color_title"
                         android:textColor="@color/colorPrimary"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -102,7 +102,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Designs should ideally be in CMYK color mode. While we accept RGB, colors may shift slightly during the printing process."
+                        android:text="@string/guideline_color_desc"
                         android:textColor="#555555" />
 
                 </LinearLayout>

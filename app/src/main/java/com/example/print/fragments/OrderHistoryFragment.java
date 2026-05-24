@@ -68,17 +68,19 @@ public class OrderHistoryFragment extends Fragment {
             @Override
             public void onCancelOrder(PrintOrder order) {
                 new AlertDialog.Builder(requireContext())
-                        .setTitle("Cancel Order")
-                        .setMessage("Are you sure you want to cancel this order?")
-                        .setPositiveButton("Yes", (dialog, which) -> {
+                        .setTitle(R.string.cancel_order)
+                        .setMessage(R.string.cancel_order_confirm)
+                        .setPositiveButton(R.string.yes, (dialog, which) -> {
                             RealtimeDatabaseHelper.getInstance().getOrdersRef()
                                     .child(order.getOrderId()).child("status").setValue("Cancelled")
                                     .addOnSuccessListener(aVoid -> {
-                                        Toast.makeText(getContext(), "Order cancelled", Toast.LENGTH_SHORT).show();
-                                        NotificationHelper.showNotification(requireContext(), "Order Cancelled", "Your order #" + order.getOrderId().substring(0, 5) + " has been cancelled.");
+                                        Toast.makeText(getContext(), R.string.order_cancelled, Toast.LENGTH_SHORT).show();
+                                        NotificationHelper.showNotification(requireContext(),
+                                                getString(R.string.order_cancelled_title),
+                                                getString(R.string.order_cancelled_msg_format, order.getOrderId().substring(0, 5)));
                                     });
                         })
-                        .setNegativeButton("No", null)
+                        .setNegativeButton(R.string.no, null)
                         .show();
             }
 
@@ -93,14 +95,14 @@ public class OrderHistoryFragment extends Fragment {
                         (view, year1, monthOfYear, dayOfMonth) -> {
                             String selectedDate = String.format(Locale.getDefault(), "%02d/%02d/%d", dayOfMonth, monthOfYear + 1, year1);
 
-                            // Update notes or a specific reschedule field in Firebase
                             RealtimeDatabaseHelper.getInstance().getOrdersRef()
                                     .child(order.getOrderId()).child("notes")
-                                    .setValue(order.getNotes() + "\n[Rescheduled to: " + selectedDate + "]")
+                                    .setValue(order.getNotes() + getString(R.string.rescheduled_note_format, selectedDate))
                                     .addOnSuccessListener(aVoid -> {
-                                        Toast.makeText(getContext(), "Reschedule requested for " + selectedDate, Toast.LENGTH_SHORT).show();
-                                        NotificationHelper.showNotification(requireContext(), "Reschedule Requested",
-                                                "Requested delivery date for order #" + order.getOrderId().substring(0, 5) + " moved to " + selectedDate);
+                                        Toast.makeText(getContext(), getString(R.string.reschedule_success, selectedDate), Toast.LENGTH_SHORT).show();
+                                        NotificationHelper.showNotification(requireContext(),
+                                                getString(R.string.reschedule_requested_title),
+                                                getString(R.string.reschedule_requested_msg_format, order.getOrderId().substring(0, 5), selectedDate));
                                     });
                         }, year, month, day);
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());

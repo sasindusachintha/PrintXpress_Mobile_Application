@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
+            android:contentDescription="@string/description"
             android:src="@drawable/ic_placeholder_image" />
 
         <TextView
@@ -25,7 +26,7 @@
             android:layout_marginTop="16dp"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:text="Category Name" />
+            android:text="@string/category_name_placeholder" />
 
         <TextView
             android:id="@+id/tv_pricing"
@@ -34,13 +35,13 @@
             android:layout_marginTop="8dp"
             android:textColor="@color/design_default_color_primary"
             android:textSize="18sp"
-            android:text="Pricing starts at $X.XX" />
+            android:text="@string/pricing_start_at" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Specifications"
+            android:text="@string/specifications"
             android:textStyle="bold" />
 
         <TextView
@@ -48,13 +49,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Detailed specifications go here..." />
+            android:text="@string/specifications_placeholder" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Sample Previews"
+            android:text="@string/sample_previews"
             android:textStyle="bold" />
 
         <HorizontalScrollView
@@ -73,10 +74,10 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_upload_my_design"
-            android:layout_width="match_parent"
+            android:layout_width="368dp"
             android:layout_height="56dp"
             android:layout_marginTop="32dp"
-            android:text="Upload My Design" />
+            android:text="@string/upload_my_design" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

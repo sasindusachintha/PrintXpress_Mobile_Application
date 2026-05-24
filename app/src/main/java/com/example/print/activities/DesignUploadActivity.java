@@ -49,7 +49,7 @@ public class DesignUploadActivity extends AppCompatActivity {
                         encodedImage = Base64Utils.encode(bitmap);
                     } catch (IOException e) {
                         e.printStackTrace();
-                        Toast.makeText(this, "Failed to load image", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.failed_load_image, Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -66,7 +66,7 @@ public class DesignUploadActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Upload: " + categoryName);
+            getSupportActionBar().setTitle(getString(R.string.upload_title_format, categoryName));
         }
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
@@ -94,21 +94,21 @@ public class DesignUploadActivity extends AppCompatActivity {
         String notes = etNotes.getText().toString().trim();
 
         if (ValidationUtils.isEmpty(encodedImage)) {
-            Toast.makeText(this, "Please select a design image", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_select_design, Toast.LENGTH_SHORT).show();
             return;
         }
         if (ValidationUtils.isEmpty(name)) {
-            etDesignName.setError("Design name is required");
+            etDesignName.setError(getString(R.string.error_name_required));
             return;
         }
         if (!ValidationUtils.isValidQuantity(qty)) {
-            etQuantity.setError("Enter a valid quantity");
+            etQuantity.setError(getString(R.string.error_invalid_quantity));
             return;
         }
 
         String userId = RealtimeDatabaseHelper.getInstance().getCurrentUserId();
         if (userId == null) {
-            Toast.makeText(this, "User not authenticated", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.user_not_authenticated, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -136,13 +136,13 @@ public class DesignUploadActivity extends AppCompatActivity {
                             saveToLibrary(userId, name, encodedImage);
                         }
                         progressBar.setVisibility(View.GONE);
-                        NotificationHelper.showNotification(this, "Order Confirmed", "Your order for " + categoryName + " has been placed successfully!");
+                        NotificationHelper.showNotification(this, getString(R.string.order_confirmed), getString(R.string.order_success_msg_format, categoryName));
                         showSuccessDialog();
                     })
                     .addOnFailureListener(e -> {
                         progressBar.setVisibility(View.GONE);
                         btnPlaceOrder.setEnabled(true);
-                        Toast.makeText(this, "Failed to place order: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, getString(R.string.failed_place_order_format, e.getMessage()), Toast.LENGTH_SHORT).show();
                     });
         }
     }
@@ -158,9 +158,9 @@ public class DesignUploadActivity extends AppCompatActivity {
 
     private void showSuccessDialog() {
         new AlertDialog.Builder(this)
-                .setTitle("Success")
-                .setMessage("Your order has been placed successfully!")
-                .setPositiveButton("OK", (dialog, which) -> finish())
+                .setTitle(R.string.success)
+                .setMessage(R.string.order_placed_success)
+                .setPositiveButton(R.string.ok, (dialog, which) -> finish())
                 .setCancelable(false)
                 .show();
     }

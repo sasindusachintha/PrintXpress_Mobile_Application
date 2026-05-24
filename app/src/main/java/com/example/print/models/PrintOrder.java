@@ -12,7 +12,6 @@ public class PrintOrder {
     private String status;
     private long timestamp;
     private String rescheduleDate; // New field for rescheduling
-
     public PrintOrder() {
         // Default constructor required for calls to DataSnapshot.getValue(PrintOrder.class)
     }
