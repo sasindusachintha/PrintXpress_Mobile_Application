@@ -57,8 +57,6 @@ public class HomeFragment extends Fragment {
     private void setupCategories() {
         List<Category> categories = new ArrayList<>();
 
-        // You can define unique sample lists for each category here
-        // To add just ONE sample, use Arrays.asList with one item
         List<Integer> businessCardSamples = Arrays.asList(
                 R.drawable.bc1,
                 R.drawable.bc2,
@@ -107,15 +105,12 @@ public class HomeFragment extends Fragment {
                 R.drawable.m5
         );
 
-
-        List<Integer> defaultSamples = Arrays.asList(R.drawable.ic_placeholder_image);
-
-        categories.add(new Category("Business Cards", R.drawable.business_cards, "Starting at $10.00", "Premium 350gsm paper, Standard size 3.5x2\"", businessCardSamples));
-        categories.add(new Category("Posters", R.drawable.posters, "Starting at $15.00", "A3, A2, A1 sizes, Gloss or Matte finish", posterSamples));
-        categories.add(new Category("Banners", R.drawable.banners, "Starting at $25.00", "Durable vinyl, include eyelets", bannerSamples));
-        categories.add(new Category("Flyers", R.drawable.flyers, "Starting at $20.00", "Double-sided, 150gsm silk paper", FlyerSamples));
-        categories.add(new Category("Stickers", R.drawable.stickers, "Starting at $5.00", "Custom shapes, waterproof vinyl", stickersSamples));
-        categories.add(new Category("Merchandise", R.drawable.merchandise, "Starting at $12.00", "T-shirts, Mugs, Tote bags", mSamples));
+        categories.add(new Category(getString(R.string.cat_business_cards), R.drawable.business_cards, getString(R.string.price_starting_format, "$10.00"), getString(R.string.spec_bc), businessCardSamples));
+        categories.add(new Category(getString(R.string.cat_posters), R.drawable.posters, getString(R.string.price_starting_format, "$15.00"), getString(R.string.spec_posters), posterSamples));
+        categories.add(new Category(getString(R.string.cat_banners), R.drawable.banners, getString(R.string.price_starting_format, "$25.00"), getString(R.string.spec_banners), bannerSamples));
+        categories.add(new Category(getString(R.string.cat_flyers), R.drawable.flyers, getString(R.string.price_starting_format, "$20.00"), getString(R.string.spec_flyers), FlyerSamples));
+        categories.add(new Category(getString(R.string.cat_stickers), R.drawable.stickers, getString(R.string.price_starting_format, "$5.00"), getString(R.string.spec_stickers), stickersSamples));
+        categories.add(new Category(getString(R.string.cat_merchandise), R.drawable.merchandise, getString(R.string.price_starting_format, "$12.00"), getString(R.string.spec_merch), mSamples));
 
         categoryAdapter = new CategoryAdapter(categories, category -> {
             Intent intent = new Intent(getActivity(), CategoryDetailActivity.class);
@@ -124,7 +119,6 @@ public class HomeFragment extends Fragment {
             intent.putExtra("CATEGORY_SPECS", category.getSpecs());
             intent.putExtra("CATEGORY_IMAGE", category.getImageResId());
 
-            // Get samples from the selected category object
             List<Integer> samples = category.getSampleImageResIds();
             if (samples != null) {
                 int[] sampleArr = new int[samples.size()];
@@ -143,9 +137,9 @@ public class HomeFragment extends Fragment {
 
     private void setupPromotions() {
         List<Promotion> promos = new ArrayList<>();
-        promos.add(new Promotion("1", "50% Off Business Cards", R.drawable.promo1));
-        promos.add(new Promotion("2", "Bulk Poster Printing", R.drawable.promo2));
-        promos.add(new Promotion("3", "Free Delivery on Banners", R.drawable.promo3));
+        promos.add(new Promotion("1", getString(R.string.promo_bc_off), R.drawable.promo1));
+        promos.add(new Promotion("2", getString(R.string.promo_bulk_posters), R.drawable.promo2));
+        promos.add(new Promotion("3", getString(R.string.promo_free_delivery_banners), R.drawable.promo3));
 
         promoAdapter = new PromotionAdapter();
         promoAdapter.setPromotions(promos);
@@ -161,7 +155,7 @@ public class HomeFragment extends Fragment {
                     .addOnSuccessListener(snapshot -> {
                         if (isAdded() && snapshot.exists()) {
                             String name = snapshot.getValue(String.class);
-                            welcomeText.setText(getString(R.string.welcome_message) + ", " + name + "!");
+                            welcomeText.setText(getString(R.string.welcome_user_format, name));
                         }
                     });
         }

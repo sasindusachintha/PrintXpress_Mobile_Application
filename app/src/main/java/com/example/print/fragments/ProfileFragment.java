@@ -137,7 +137,7 @@ public class ProfileFragment extends Fragment {
         }
 
         if (!ValidationUtils.isValidPhone(newPhone)) {
-            etPhone.setError("Invalid phone number (10 digits)");
+            etPhone.setError(getString(R.string.error_invalid_phone));
             return;
         }
 

@@ -45,7 +45,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Select Design"
+                        android:text="@string/select_design"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -58,7 +58,7 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_upload"
                         android:background="#F0F0F0"
-                        android:contentDescription="Design Preview" />
+                        android:contentDescription="@string/design_preview_desc" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btn_select_image"
@@ -66,7 +66,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Choose from Gallery"
+                        android:text="@string/choose_from_gallery"
                         app:icon="@drawable/ic_upload" />
 
                 </LinearLayout>
@@ -90,7 +90,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Design Name"
+                        android:hint="@string/design_name_hint"
                         app:boxCornerRadiusTopStart="12dp"
                         app:boxCornerRadiusTopEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
@@ -107,7 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:hint="Description"
+                        android:hint="@string/description_hint"
                         app:boxCornerRadiusTopStart="12dp"
                         app:boxCornerRadiusTopEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
@@ -124,7 +124,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:hint="Quantity"
+                        android:hint="@string/quantity"
                         app:boxCornerRadiusTopStart="12dp"
                         app:boxCornerRadiusTopEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
@@ -142,7 +142,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:hint="Additional Notes"
+                        android:hint="@string/additional_notes_hint"
                         app:boxCornerRadiusTopStart="12dp"
                         app:boxCornerRadiusTopEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
@@ -161,7 +161,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Save this design for future use"
+                        android:text="@string/save_design_future"
                         android:checked="true" />
 
                 </LinearLayout>
@@ -173,7 +173,7 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="16dp"
-                android:text="Place Order"
+                android:text="@string/place_order"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"

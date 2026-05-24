@@ -10,8 +10,8 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="PrintXpress"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
@@ -37,32 +37,32 @@
         <activity
             android:name=".activities.DesignUploadActivity"
             android:exported="false"
-            android:label="Upload Design" />
+            android:label="@string/upload_design" />
 
         <activity
             android:name=".activities.DesignGuidelinesActivity"
             android:exported="false"
-            android:label="Design Guidelines" />
+            android:label="@string/design_guidelines" />
 
         <activity
             android:name=".activities.CategoryDetailActivity"
             android:exported="false"
-            android:label="Product Details" />
+            android:label="@string/products" />
 
         <activity
             android:name=".activities.SupportActivity"
             android:exported="false"
-            android:label="Help &amp; Support" />
+            android:label="@string/help_support" />
 
         <activity
             android:name=".activities.SavedDesignsActivity"
             android:exported="false"
-            android:label="Saved Designs" />
+            android:label="@string/saved_designs" />
 
         <activity
             android:name=".activities.DeliveryAddressesActivity"
             android:exported="false"
-            android:label="Delivery Addresses" />
+            android:label="@string/delivery_addresses" />
 
     </application>
 

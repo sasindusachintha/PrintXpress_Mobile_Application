@@ -19,13 +19,11 @@ public class OrderRepository {
         this.dbHelper = RealtimeDatabaseHelper.getInstance();
     }
 
-    /**
-     * Places an order using the PrintOrder model.
-     */
+
     public void placeOrder(PrintOrder order, OnOrderCompleteListener listener) {
         String id = dbHelper.getOrdersRef().push().getKey();
         if (id == null) {
-            listener.onFailure("Could not generate order ID");
+            listener.onFailure("ID_ERROR"); // Internal code or localized via listener
             return;
         }
         order.setOrderId(id);

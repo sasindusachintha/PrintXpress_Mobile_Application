@@ -22,6 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PrintXpress"
+rootProject.name = "print"
 include(":app")
- 

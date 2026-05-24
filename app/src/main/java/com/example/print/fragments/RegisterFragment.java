@@ -56,17 +56,17 @@ public class RegisterFragment extends Fragment {
             }
 
             if (!ValidationUtils.isValidEmail(email)) {
-                etEmail.setError("Invalid email address");
+                etEmail.setError(getString(R.string.error_invalid_email));
                 return;
             }
 
             if (!ValidationUtils.isValidPhone(phone)) {
-                etPhone.setError("Invalid phone number (10 digits)");
+                etPhone.setError(getString(R.string.error_invalid_phone));
                 return;
             }
 
             if (!ValidationUtils.isValidPassword(password)) {
-                etPassword.setError("Password must be at least 6 characters");
+                etPassword.setError(getString(R.string.error_invalid_password));
                 return;
             }
 

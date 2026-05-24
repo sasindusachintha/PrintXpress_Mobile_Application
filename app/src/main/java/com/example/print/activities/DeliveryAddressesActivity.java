@@ -76,7 +76,7 @@ public class DeliveryAddressesActivity extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(DatabaseError error) {
-                        Toast.makeText(DeliveryAddressesActivity.this, "Failed to load addresses", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DeliveryAddressesActivity.this, R.string.error_load_addresses, Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -94,11 +94,11 @@ public class DeliveryAddressesActivity extends AppCompatActivity {
                     String full = etFull.getText().toString().trim();
 
                     if (ValidationUtils.isEmpty(label)) {
-                        Toast.makeText(this, "Label is required", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.error_label_required, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     if (ValidationUtils.isEmpty(full)) {
-                        Toast.makeText(this, "Address is required", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.error_address_required, Toast.LENGTH_SHORT).show();
                         return;
                     }
 
@@ -116,7 +116,7 @@ public class DeliveryAddressesActivity extends AppCompatActivity {
         Address address = new Address(addrId, label, full);
         if (addrId != null) {
             RealtimeDatabaseHelper.getInstance().getUsersRef().child(uid).child("addresses").child(addrId).setValue(address)
-                    .addOnSuccessListener(aVoid -> Toast.makeText(this, "Address added!", Toast.LENGTH_SHORT).show());
+                    .addOnSuccessListener(aVoid -> Toast.makeText(this, R.string.msg_address_added, Toast.LENGTH_SHORT).show());
         }
     }
 }

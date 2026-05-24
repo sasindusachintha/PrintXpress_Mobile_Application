@@ -3,6 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_guidelines"
-        android:title="Design Guidelines"
+        android:title="@string/design_guidelines"
         app:showAsAction="ifRoom" />
 </menu>

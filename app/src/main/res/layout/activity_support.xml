@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Frequently Asked Questions"
+            android:text="@string/faqs_title"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
@@ -33,13 +33,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="How long does printing take?"
+                    android:text="@string/faq_q1"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Usually 2-3 business days after design approval." />
+                    android:text="@string/faq_a1" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -58,20 +58,20 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Can I cancel my order?"
+                    android:text="@string/faq_q2"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Yes, as long as it is in 'Pending' status." />
+                    android:text="@string/faq_a2" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contact Us"
+            android:text="@string/contact_us"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
@@ -79,18 +79,18 @@
 
         <Button
             android:id="@+id/btn_email_support"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="56dp"
-            android:text="Email Support"
+            android:text="@string/email_support"
             app:icon="@android:drawable/ic_dialog_email" />
 
         <Button
             android:id="@+id/btn_call_support"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="56dp"
             android:layout_marginTop="12dp"
-            android:text="Call Customer Service"
+            android:text="@string/call_customer_service"
             app:icon="@android:drawable/ic_menu_call" />
 
     </LinearLayout>

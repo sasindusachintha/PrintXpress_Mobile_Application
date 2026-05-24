@@ -56,31 +56,37 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
 
         holder.categoryName.setText(order.getCategory());
         holder.designName.setText(order.getDesignName());
-        holder.status.setText(order.getStatus());
-        holder.qty.setText(String.format(Locale.getDefault(), "Qty: %s", order.getQuantity()));
 
-        // Status Styling
-        if ("Pending".equalsIgnoreCase(order.getStatus())) {
+        String statusText = order.getStatus();
+        if (context.getString(R.string.status_pending).equalsIgnoreCase(statusText)) {
             holder.status.setTextColor(Color.parseColor("#FF9800"));
             holder.actionsContainer.setVisibility(View.VISIBLE);
-        } else if ("Processing".equalsIgnoreCase(order.getStatus())) {
+        } else if (context.getString(R.string.status_processing).equalsIgnoreCase(statusText)) {
             holder.status.setTextColor(Color.parseColor("#2196F3"));
             holder.actionsContainer.setVisibility(View.GONE);
-        } else if ("Completed".equalsIgnoreCase(order.getStatus())) {
+        } else if (context.getString(R.string.status_completed).equalsIgnoreCase(statusText)) {
             holder.status.setTextColor(Color.parseColor("#4CAF50"));
             holder.actionsContainer.setVisibility(View.GONE);
-        } else if ("Cancelled".equalsIgnoreCase(order.getStatus())) {
+        } else if (context.getString(R.string.status_cancelled).equalsIgnoreCase(statusText)) {
             holder.status.setTextColor(Color.RED);
             holder.actionsContainer.setVisibility(View.GONE);
         } else {
-            holder.status.setTextColor(Color.BLACK);
-            holder.actionsContainer.setVisibility(View.GONE);
+            // Fallback for raw status values from DB
+            if ("Pending".equalsIgnoreCase(statusText)) {
+                holder.status.setTextColor(Color.parseColor("#FF9800"));
+                holder.actionsContainer.setVisibility(View.VISIBLE);
+            } else {
+                holder.status.setTextColor(Color.BLACK);
+                holder.actionsContainer.setVisibility(View.GONE);
+            }
         }
+        holder.status.setText(statusText);
+        holder.qty.setText(context.getString(R.string.qty_format, order.getQuantity()));
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy, HH:mm", Locale.getDefault());
         String dateStr = sdf.format(new Date(order.getTimestamp()));
         if (order.getRescheduleDate() != null && !order.getRescheduleDate().isEmpty()) {
-            dateStr += "\n(Rescheduled: " + order.getRescheduleDate() + ")";
+            dateStr += context.getString(R.string.rescheduled_label_format, order.getRescheduleDate());
         }
         holder.date.setText(dateStr);
 

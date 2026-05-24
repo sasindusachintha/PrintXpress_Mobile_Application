@@ -43,8 +43,7 @@ public class SavedDesignsActivity extends AppCompatActivity {
 
         designList = new ArrayList<>();
         adapter = new SavedDesignAdapter(design -> {
-            // Handle clicking a saved design (e.g., start a new order with it)
-            Toast.makeText(this, "Selected: " + design.getName(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.msg_selected_format, design.getName()), Toast.LENGTH_SHORT).show();
         });
         recyclerView.setAdapter(adapter);
 
@@ -73,7 +72,7 @@ public class SavedDesignsActivity extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(DatabaseError error) {
-                        Toast.makeText(SavedDesignsActivity.this, "Failed to load designs", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SavedDesignsActivity.this, R.string.error_load_designs, Toast.LENGTH_SHORT).show();
                     }
                 });
     }
